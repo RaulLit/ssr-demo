@@ -26,7 +26,7 @@ const router = useRouter()
   padding: 24px;
   border-radius: 8px;
   border: 1px solid lightgray;
-  background: #ddd;
+  background: #dfdfdf;
 }
 .card:hover {
   box-shadow: 1px 2px 10px gray;

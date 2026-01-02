@@ -1,9 +1,6 @@
 <template>
   <div class="container">
-    <a href="#" @click="$router.back()">
-      Go Back
-    </a>
-    <NuxtLink to="/">Go Home</NuxtLink>
+    <NavLinks />
 
     <div class="ssr">
       <h4>Server Side Rendered</h4>
@@ -29,6 +26,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import NavLinks from '~/components/NavLinks.vue';
 const route = useRoute();
 const id = route.params.id;
 
@@ -43,12 +41,18 @@ onMounted(async () => {
 })
 </script>
 
-<style>
+<style scoped>
+.container {
+  margin-top: 24px;
+}
+.ssr, .csr {
+  padding: 16px
+}
 .card {
-  padding: 24px;
+  padding: 16px;
   border-radius: 8px;
   border: 1px solid lightgray;
-  background: #ddd;
+  background: #fff;
   margin-bottom: 8px;
 }
 .card p {
